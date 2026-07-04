@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
@@ -28,9 +31,13 @@
                     <p class="brand-tagline">Wearable Works of Art</p>
                 </div>
             </div>
-            <a href="https://diavojewels.com" target="_blank" class="header__link">
-                <span>Go to Store</span> <i class="ph ph-arrow-up-right"></i>
-            </a>
+            <div class="header__links">
+                <a href="#how-it-works" class="header__navlink">How it Works</a>
+                <a href="#our-story" class="header__navlink">Our Story</a>
+                <a href="#designers" class="header__navlink">Founders</a>
+                <span class="header__navlink text-btn" id="header-list-showroom-btn" style="cursor: pointer;">Book Showroom</span>
+                <button type="button" class="btn-primary header-book-btn" id="header-start-quiz-btn">Start Quiz</button>
+            </div>
         </div>
     </header>
 
@@ -39,32 +46,74 @@
              LANDING PAGE CONTAINER
              ========================================== -->
         <div class="landing__container" id="landing-container">
+            <!-- Boutique Hero Section -->
             <section class="landing-hero">
                 <div class="hero-overlay"></div>
                 <div class="hero-content">
-                    <span class="hero-tag">BESPOKE DIAMONDS &amp; GOLD</span>
                     <h1>Wearable Works of Art</h1>
                     <p class="hero-subtitle">Discover handcrafted luxury jewelry tailored to your unique story, or reserve an exclusive styling consultation at our private galleries.</p>
+                    <div class="hero-actions-row">
+                        <button type="button" class="btn-primary hero-btn-gold" id="hero-start-quiz-btn">
+                            Start Style Quiz <i class="ph-bold ph-arrow-right"></i>
+                        </button>
+                        <button type="button" class="btn-secondary hero-btn-outline" id="hero-book-showroom-btn">
+                            Book Showroom Slot <i class="ph-bold ph-calendar-plus"></i>
+                        </button>
+                    </div>
                 </div>
             </section>
 
+            <!-- Overlapping Care Provider Badges Card -->
+            <div class="overlapping-badges-card-wrapper">
+                <div class="overlapping-badges-card">
+                    <p class="badges-card-title">OUR LUXURY CRAFTSMANSHIP GUARANTEES</p>
+                    <div class="badges-grid">
+                        <div class="badge-item">
+                            <div class="badge-icon-circle gold-bg">
+                                <i class="ph-fill ph-certificate"></i>
+                            </div>
+                            <span class="badge-label">100% Certified</span>
+                        </div>
+                        <div class="badge-item">
+                            <div class="badge-icon-circle gold-bg">
+                                <i class="ph-fill ph-sketch-logo"></i>
+                            </div>
+                            <span class="badge-label">Conflict-Free</span>
+                        </div>
+                        <div class="badge-item">
+                            <div class="badge-icon-circle gold-bg">
+                                <i class="ph-fill ph-truck"></i>
+                            </div>
+                            <span class="badge-label">Insured Shipping</span>
+                        </div>
+                        <div class="badge-item">
+                            <div class="badge-icon-circle gold-bg">
+                                <i class="ph-fill ph-shield-check"></i>
+                            </div>
+                            <span class="badge-label">Lifetime Warranty</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Splits Booking Row -->
             <section class="landing-splits-section">
                 <div class="splits-grid">
-                    <!-- Split 1: Gift Finder Quiz -->
+                    <!-- Split 1: Quiz -->
                     <div class="split-card cta-quiz-card">
                         <div class="split-card-bg quiz-bg"></div>
                         <div class="split-overlay"></div>
                         <div class="split-content">
                             <i class="ph-light ph-sparkles split-icon"></i>
                             <h3>Style Finder Quiz</h3>
-                            <p>Find the perfect jewelry matching your recipient, metal choice, and budget. Get a custom recommendation tray and an exclusive 10% voucher code.</p>
+                            <p>Find the perfect jewelry matching your recipient, metal choice, and budget. Get a custom recommendation.</p>
                             <button type="button" class="btn-primary" id="landing-start-quiz-btn">
-                                Start Style Finder <i class="ph-bold ph-arrow-right"></i>
+                                Start Quiz <i class="ph-bold ph-arrow-right"></i>
                             </button>
                         </div>
                     </div>
 
-                    <!-- Split 2: Showroom Appointment -->
+                    <!-- Split 2: Showroom -->
                     <div class="split-card cta-showroom-card">
                         <div class="split-card-bg showroom-bg"></div>
                         <div class="split-overlay"></div>
@@ -76,6 +125,34 @@
                                 Book Showroom Slot <i class="ph-bold ph-calendar-plus"></i>
                             </button>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How It Works Section -->
+            <section id="how-it-works" class="landing-section">
+                <h3 class="section-title">Bespoke Process</h3>
+                <p class="section-subtitle">How Diavo Jewels designs your dream piece</p>
+                <div class="process-flow-grid">
+                    <div class="process-step-card">
+                        <div class="step-badge">1</div>
+                        <h4>Style Quiz</h4>
+                        <p>Share your metal preferences, stone selections, and budget parameters.</p>
+                    </div>
+                    <div class="process-step-card">
+                        <div class="step-badge">2</div>
+                        <h4>Design Consultation</h4>
+                        <p>Connect with our expert design coordinators to visualize sketches.</p>
+                    </div>
+                    <div class="process-step-card">
+                        <div class="step-badge">3</div>
+                        <h4>CAD Rendering</h4>
+                        <p>Receive 3D CAD models of your design before manufacturing starts.</p>
+                    </div>
+                    <div class="process-step-card">
+                        <div class="step-badge">4</div>
+                        <h4>Handcrafted Delivery</h4>
+                        <p>Our master artisans manufacture your piece with insured door-delivery.</p>
                     </div>
                 </div>
             </section>
@@ -99,8 +176,8 @@
                 </div>
             </section>
 
-            <!-- About Us & Animated Counters Section -->
-            <section class="landing-about-section">
+            <!-- Our Story Section -->
+            <section id="our-story" class="landing-about-section">
                 <div class="about-grid">
                     <div class="about-narrative">
                         <h3>Our Story &amp; Philosophy</h3>
@@ -132,6 +209,54 @@
                                 <span class="counter-plus">+</span>
                             </div>
                             <span class="counter-label">Showroom Bookings Hosted</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Founder Section -->
+            <section id="designers" class="landing-section founder-section">
+                <div class="founder-card-layout">
+                    <div class="founder-avatar-col">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Anushka Agarwal" class="founder-img">
+                    </div>
+                    <div class="founder-info-col">
+                        <span class="founder-tag">OUR FOUNDERS</span>
+                        <h3>Anushka &amp; Rishabh Agarwal</h3>
+                        <p class="founder-subtitle">Creative Directors &amp; Designers</p>
+                        <p class="founder-description">"Every piece of jewelry holds a milestone, a sentiment, or a legacy. At Diavo, we don't believe in mass production. Our design house is committed to making unique, customized wearable works of art that reflect your personality and style signature."</p>
+                        <div class="founder-signature">Anushka Agarwal</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Slider Section -->
+            <section class="landing-section testimonials-section">
+                <h3 class="section-title">What Our Clients Say</h3>
+                <p class="section-subtitle">Exquisite reviews from our fine jewelry network</p>
+                <div class="owl-carousel owl-theme testimonials-carousel">
+                    <div class="testimonial-slide-card">
+                        <i class="ph-fill ph-quotes testimonial-quote-icon"></i>
+                        <p class="testimonial-text">"Anushka designed my custom bridal necklace. The CAD modeling made it easy to tweak the diamond layouts before casting. Exceptional work!"</p>
+                        <div class="testimonial-author">
+                            <strong>Meera Sen</strong>
+                            <span>Client from New Delhi</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide-card">
+                        <i class="ph-fill ph-quotes testimonial-quote-icon"></i>
+                        <p class="testimonial-text">"Booking a slot at their Moradabad showroom was quick and safe. They prepared a dedicated tray of rings matching my exact budget choice."</p>
+                        <div class="testimonial-author">
+                            <strong>Rohan Kapoor</strong>
+                            <span>Client from Moradabad</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide-card">
+                        <i class="ph-fill ph-quotes testimonial-quote-icon"></i>
+                        <p class="testimonial-text">"Their lifetime warranty and certification check gave me absolute peace of mind. The packaging was beautifully premium!"</p>
+                        <div class="testimonial-author">
+                            <strong>Srishti Roy</strong>
+                            <span>Client from Gurgaon</span>
                         </div>
                     </div>
                 </div>
@@ -664,6 +789,10 @@
         <span class="tooltip-text">WhatsApp Support</span>
     </a>
 
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- App Logic Script -->
     <script src="js/app.js"></script>
 </body>
