@@ -1020,6 +1020,9 @@ footer p {
    LANDING PAGE STYLING RULES
    ========================================== */
 .landing__container {
+    width: 90%;
+    max-width: 950px;
+    margin: 0 auto;
     animation: fadeIn 0.8s ease forwards;
 }
 
