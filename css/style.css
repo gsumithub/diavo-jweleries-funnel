@@ -1102,7 +1102,9 @@ footer p {
     padding: 50px 30px;
     min-height: 320px;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     box-shadow: var(--shadow-sm);
     transition: var(--transition-smooth);
     border: 1px solid var(--border-color);
@@ -1150,9 +1152,13 @@ footer p {
 .split-content {
     position: relative;
     z-index: 2;
-    text-align: left;
+    text-align: center;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 .split-icon {
     font-size: 32px;
