@@ -122,6 +122,9 @@ const PRODUCTS_CATALOG = [
 // ==========================================
 // DOM ELEMENTS
 // ==========================================
+const landingContainer = document.getElementById("landing-container");
+const wizardContainer = document.getElementById("wizard-container");
+
 const flowQuizBtn = document.getElementById("flow-quiz-btn");
 const flowShowroomBtn = document.getElementById("flow-showroom-btn");
 const quizSections = document.querySelector(".quiz-flow-sections");
@@ -252,7 +255,19 @@ function init() {
         btn.addEventListener("click", resetFunnel);
     });
 
-    // 7. Clipboard Copy
+    // 7. Landing Page CTA Clicks
+    document.getElementById("landing-start-quiz-btn").addEventListener("click", () => {
+        startWizardFromLanding("quiz");
+    });
+    document.getElementById("landing-start-showroom-btn").addEventListener("click", () => {
+        startWizardFromLanding("showroom");
+    });
+
+    // Back to Home
+    document.getElementById("wizard-back-home-btn").addEventListener("click", returnToLanding);
+    document.getElementById("brand-logo-btn").addEventListener("click", returnToLanding);
+
+    // 8. Clipboard Copy
     const copyBtn = document.getElementById("copy-coupon-btn");
     if (copyBtn) {
         copyBtn.addEventListener("click", () => {
@@ -265,8 +280,22 @@ function init() {
         });
     }
 
-    // 8. Clear error indicators
+    // 9. Clear error indicators
     setupClearErrors();
+}
+
+function startWizardFromLanding(flow) {
+    landingContainer.style.display = "none";
+    wizardContainer.style.display = "block";
+    switchFlow(flow);
+    document.querySelector("main").scrollIntoView({ behavior: 'smooth' });
+}
+
+function returnToLanding() {
+    landingContainer.style.display = "block";
+    wizardContainer.style.display = "none";
+    resetFunnel();
+    document.querySelector("main").scrollIntoView({ behavior: 'smooth' });
 }
 
 function setupClearErrors() {
@@ -284,7 +313,6 @@ function setupClearErrors() {
 // SWITCHING FLOWS
 // ==========================================
 function switchFlow(flow) {
-    if (activeFlow === flow) return;
     activeFlow = flow;
 
     if (flow === "quiz") {
@@ -363,10 +391,12 @@ function updateStepUI() {
     const selectorPrefix = activeFlow === "quiz" ? "q-step-" : "s-step-";
     for (let i = 1; i <= TOTAL_STEPS; i++) {
         const section = document.getElementById(`${selectorPrefix}${i}`);
-        if (i === step) {
-            section.classList.add("active");
-        } else {
-            section.classList.remove("active");
+        if (section) {
+            if (i === step) {
+                section.classList.add("active");
+            } else {
+                section.classList.remove("active");
+            }
         }
     }
 
@@ -550,8 +580,8 @@ function resetFunnel() {
     // Restore step views
     quizStep = 1;
     showroomStep = 1;
-    qSuccessScreen.style.display = "none";
-    sSuccessScreen.style.display = "none";
+    if (qSuccessScreen) qSuccessScreen.style.display = "none";
+    if (sSuccessScreen) sSuccessScreen.style.display = "none";
     funnelActionsRow.style.display = "";
 
     init();

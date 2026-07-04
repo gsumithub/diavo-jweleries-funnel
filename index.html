@@ -24,7 +24,7 @@
             <div class="header__brand">
                 <i class="ph-light ph-sketch-logo logo-icon"></i>
                 <div class="header__text">
-                    <span class="brand-name">DIAVO <span>JEWELS</span></span>
+                    <span class="brand-name" id="brand-logo-btn" style="cursor: pointer;">DIAVO <span>JEWELS</span></span>
                     <p class="brand-tagline">Wearable Works of Art</p>
                 </div>
             </div>
@@ -35,7 +35,82 @@
     </header>
 
     <main>
-        <div class="funnel__container">
+        <!-- ==========================================
+             LANDING PAGE CONTAINER
+             ========================================== -->
+        <div class="landing__container" id="landing-container">
+            <section class="landing-hero">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">BESPOKE DIAMONDS &amp; GOLD</span>
+                    <h1>Wearable Works of Art</h1>
+                    <p class="hero-subtitle">Discover handcrafted luxury jewelry tailored to your unique story, or reserve an exclusive styling consultation at our private galleries.</p>
+                </div>
+            </section>
+
+            <section class="landing-splits-section">
+                <div class="splits-grid">
+                    <!-- Split 1: Gift Finder Quiz -->
+                    <div class="split-card cta-quiz-card">
+                        <div class="split-card-bg quiz-bg"></div>
+                        <div class="split-overlay"></div>
+                        <div class="split-content">
+                            <i class="ph-light ph-sparkles split-icon"></i>
+                            <h3>Style Finder Quiz</h3>
+                            <p>Find the perfect jewelry matching your recipient, metal choice, and budget. Get a custom recommendation tray and an exclusive 10% voucher code.</p>
+                            <button type="button" class="btn-primary" id="landing-start-quiz-btn">
+                                Start Style Finder <i class="ph-bold ph-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Split 2: Showroom Appointment -->
+                    <div class="split-card cta-showroom-card">
+                        <div class="split-card-bg showroom-bg"></div>
+                        <div class="split-overlay"></div>
+                        <div class="split-content">
+                            <i class="ph-light ph-calendar split-icon"></i>
+                            <h3>Showroom Booking</h3>
+                            <p>Schedule a private VIP consultation at our boutique showrooms in Delhi NCR DLF Midtown or Moradabad for custom bridal designs and solitaire viewing.</p>
+                            <button type="button" class="btn-primary" id="landing-start-showroom-btn" style="background: #ffffff; color: var(--secondary); border: 1px solid #ffffff;">
+                                Book Showroom Slot <i class="ph-bold ph-calendar-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Brand Features Grid -->
+            <section class="landing-features">
+                <div class="feature-item">
+                    <i class="ph-bold ph-certificate"></i>
+                    <h4>Certified Diamonds</h4>
+                    <p>Every solitaire and diamond setting comes with verified laboratory certifications.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="ph-bold ph-palette"></i>
+                    <h4>Custom Designing</h4>
+                    <p>Collaborate with our HOD designers to sketch and manufacture bespoke jewelry models.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="ph-bold ph-shield-check"></i>
+                    <h4>Private Showrooms</h4>
+                    <p>Enjoy secure VIP lounges with personal styling assistants in New Delhi and Moradabad.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==========================================
+             WIZARD FORM CONTAINER (HIDDEN ON LOAD)
+             ========================================== -->
+        <div class="funnel__container" id="wizard-container" style="display: none;">
+            
+            <div class="wizard-back-row">
+                <button type="button" class="btn-back-home" id="wizard-back-home-btn">
+                    <i class="ph-bold ph-arrow-left"></i> Back to Main Page
+                </button>
+            </div>
+
             <!-- Flow Toggle Tabs -->
             <div class="flow-tabs">
                 <button type="button" class="flow-tab-btn active" id="flow-quiz-btn">
