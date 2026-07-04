@@ -66,12 +66,18 @@
         padding: 16px;
     }
 
+    .card-grid.col-3 {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
     .footer__container {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
 }
+
 
 /* Small Mobiles (up to 480px) */
 @media screen and (max-width: 480px) {

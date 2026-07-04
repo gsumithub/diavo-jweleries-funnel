@@ -925,3 +925,94 @@ footer p {
     color: var(--text-light);
     font-size: 12px;
 }
+
+/* ==========================================
+   SHOWROOM APPOINTMENT SPECIFIC STYLES
+   ========================================== */
+.flow-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.flow-tab-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px 24px;
+    border-radius: var(--border-radius-full);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition-smooth);
+}
+
+.flow-tab-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.flow-tab-btn.active {
+    background: var(--accent-gradient);
+    color: #ffffff;
+    border-color: var(--primary);
+    box-shadow: 0 4px 15px rgba(171, 140, 82, 0.2);
+}
+
+.showroom-address-card {
+    background-color: #fafbf9;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: 24px;
+    max-width: 580px;
+    margin: 0 auto 30px;
+    text-align: left;
+}
+
+.address-header {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--primary);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.address-body h4 {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 8px;
+}
+
+.address-text {
+    font-size: 13px;
+    color: var(--text-main);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.address-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--text-muted);
+    border-top: 1px dashed var(--border-color);
+    padding-top: 12px;
+}
+
+.address-meta span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
