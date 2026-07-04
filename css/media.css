@@ -90,12 +90,23 @@
         padding-top: 30px;
     }
 
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .about-narrative {
+        text-align: center;
+    }
+
     .footer__container {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
 }
+
 
 
 
