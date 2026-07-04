@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diavo Jewels | Luxury Gift Finder & Style Quiz</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <!-- Premium Top Accent Line -->
+    <div class="top-gold-bar"></div>
+
+    <!-- Luxury Header -->
+    <header>
+        <div class="header__container">
+            <div class="header__brand">
+                <i class="ph-light ph-sketch-logo logo-icon"></i>
+                <div class="header__text">
+                    <span class="brand-name">DIAVO <span>JEWELERIES</span></span>
+                    <p class="brand-tagline">Wearable Works of Art</p>
+                </div>
+            </div>
+            <a href="https://diavojewels.com" target="_blank" class="header__link">
+                <span>Go to Store</span> <i class="ph ph-arrow-up-right"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="funnel__container">
+            <!-- Stepper Progress UI -->
+            <div class="stepper">
+                <div class="step-progress-line">
+                    <div class="step-progress-fill" id="progress-fill"></div>
+                </div>
+                
+                <div class="step-item active" data-step="1">
+                    <div class="step-icon-circle">1</div>
+                    <span class="step-label">Recipient</span>
+                </div>
+
+                <div class="step-item" data-step="2">
+                    <div class="step-icon-circle">2</div>
+                    <span class="step-label">Preferences</span>
+                </div>
+
+                <div class="step-item" data-step="3">
+                    <div class="step-icon-circle">3</div>
+                    <span class="step-label">Budget</span>
+                </div>
+
+                <div class="step-item" data-step="4">
+                    <div class="step-icon-circle">4</div>
+                    <span class="step-label">Curation</span>
+                </div>
+            </div>
+
+            <!-- Form Card Wrapper -->
+            <div class="form__card">
+                <form id="funnel-form" novalidate>
+                    
+                    <!-- ==========================================
+                         STEP 1: RECIPIENT & OCCASION
+                         ========================================== -->
+                    <div class="step-content active" id="step-1-content">
+                        <div class="step-header">
+                            <h2>Who are we celebrating today?</h2>
+                            <p>Select the recipient and the occasion so we can start tailoring their bespoke selection.</p>
+                        </div>
+                        
+                        <!-- Recipient Selector Grid -->
+                        <div class="input-group">
+                            <label><i class="ph-bold ph-user-shared"></i> The Recipient</label>
+                            <div class="card-grid col-4">
+                                <div class="choice-card active" data-type="recipient" data-value="My Partner">
+                                    <i class="ph-light ph-heart"></i>
+                                    <span>My Partner / Spouse</span>
+                                </div>
+                                <div class="choice-card" data-type="recipient" data-value="My Family">
+                                    <i class="ph-light ph-users"></i>
+                                    <span>Mother / Family</span>
+                                </div>
+                                <div class="choice-card" data-type="recipient" data-value="A Friend">
+                                    <i class="ph-light ph-gift"></i>
+                                    <span>A Dear Friend</span>
+                                </div>
+                                <div class="choice-card" data-type="recipient" data-value="Myself">
+                                    <i class="ph-light ph-sparkles"></i>
+                                    <span>For Myself</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Occasion Selector Grid -->
+                        <div class="input-group">
+                            <label><i class="ph-bold ph-balloon"></i> The Occasion</label>
+                            <div class="card-grid col-4">
+                                <div class="choice-card active" data-type="occasion" data-value="Anniversary">
+                                    <i class="ph-light ph-rings"></i>
+                                    <span>Anniversary / Proposal</span>
+                                </div>
+                                <div class="choice-card" data-type="occasion" data-value="Birthday">
+                                    <i class="ph-light ph-cake"></i>
+                                    <span>Birthday Celebration</span>
+                                </div>
+                                <div class="choice-card" data-type="occasion" data-value="Everyday Wear">
+                                    <i class="ph-light ph-briefcase"></i>
+                                    <span>Everyday Wear</span>
+                                </div>
+                                <div class="choice-card" data-type="occasion" data-value="Wedding / Festive">
+                                    <i class="ph-light ph-confetti"></i>
+                                    <span>Wedding / Festive</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ==========================================
+                         STEP 2: MATERIAL & STYLE PREFERENCES
+                         ========================================== -->
+                    <div class="step-content" id="step-2-content">
+                        <div class="step-header">
+                            <h2>Select Style DNA</h2>
+                            <p>Refine the aesthetics of the jewelry pieces, from metals to gemstones.</p>
+                        </div>
+
+                        <!-- Metals Selector -->
+                        <div class="input-group">
+                            <label><i class="ph-bold ph-drop"></i> Metal Preference</label>
+                            <div class="card-grid col-4">
+                                <div class="choice-card active" data-type="metal" data-value="18K Gold">
+                                    <div class="color-dot gold"></div>
+                                    <span>18K Yellow Gold</span>
+                                </div>
+                                <div class="choice-card" data-type="metal" data-value="925 Sterling Silver">
+                                    <div class="color-dot silver"></div>
+                                    <span>925 Sterling Silver</span>
+                                </div>
+                                <div class="choice-card" data-type="metal" data-value="14K Rose Gold">
+                                    <div class="color-dot rose-gold"></div>
+                                    <span>14K Rose Gold</span>
+                                </div>
+                                <div class="choice-card" data-type="metal" data-value="Platinum">
+                                    <div class="color-dot platinum"></div>
+                                    <span>Platinum Accent</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <!-- Category Dropdown -->
+                            <div class="input-group">
+                                <label for="category-type"><i class="ph-bold ph-shapes"></i> Jewelry Category</label>
+                                <select id="category-type">
+                                    <option value="Rings" selected>Rings (Solitaires, Bands)</option>
+                                    <option value="Necklaces">Necklaces & Pendants</option>
+                                    <option value="Earrings">Earrings & Studs</option>
+                                    <option value="Bracelets">Bracelets & Bangles</option>
+                                </select>
+                            </div>
+
+                            <!-- Gemstones Dropdown -->
+                            <div class="input-group">
+                                <label for="stone-type"><i class="ph-bold ph-gem"></i> Gemstone Preference</label>
+                                <select id="stone-type">
+                                    <option value="Certified Diamonds" selected>Certified Natural Diamonds</option>
+                                    <option value="Sterling Silver / CZ">Premium CZ / Swarovski Stones</option>
+                                    <option value="Plain / Solid Metal">Classic Plain Solid Metal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ==========================================
+                         STEP 3: BUDGET SELECTOR
+                         ========================================== -->
+                    <div class="step-content" id="step-3-content">
+                        <div class="step-header">
+                            <h2>Define Budget Range</h2>
+                            <p>We craft premium designs for both entry-level silver luxury and high-end natural diamonds.</p>
+                        </div>
+
+                        <!-- Budget Card Grid -->
+                        <div class="input-group">
+                            <label><i class="ph-bold ph-coins"></i> Select Your Budget Range</label>
+                            <div class="card-grid col-2">
+                                <div class="budget-card" data-budget="Under ₹5,000">
+                                    <div class="budget-title">Under ₹5,000</div>
+                                    <p class="budget-desc">Ideal for Sterling Silver gifts & daily wear accessories.</p>
+                                </div>
+                                <div class="budget-card active" data-budget="₹5,000 - ₹20,000">
+                                    <div class="budget-title">₹5,000 - ₹20,000</div>
+                                    <p class="budget-desc">Perfect for premium silver, light gold charms, & CZ necklaces.</p>
+                                </div>
+                                <div class="budget-card" data-budget="₹20,000 - ₹50,000">
+                                    <div class="budget-title">₹20,000 - ₹50,000</div>
+                                    <p class="budget-desc">Great for 14K/18K daily wear gold rings & certified diamonds.</p>
+                                </div>
+                                <div class="budget-card" data-budget="₹50,000+">
+                                    <div class="budget-title">₹50,000+</div>
+                                    <p class="budget-desc">Designed for premium solitaires, wedding sets, & luxury investments.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ==========================================
+                         STEP 4: CONTACT & SUMMARY RECEIPT
+                         ========================================== -->
+                    <div class="step-content" id="step-4-content">
+                        <div class="step-header">
+                            <h2>Bespoke Curation Review</h2>
+                            <p>Provide details to receive your 10% coupon code and curated recommendations.</p>
+                        </div>
+
+                        <div class="summary-layout">
+                            <!-- Left Form fields -->
+                            <div class="summary-fields">
+                                <div class="input-group">
+                                    <label for="fullName"><i class="ph-bold ph-user"></i> Full Name <span class="required">*</span></label>
+                                    <input type="text" id="fullName" placeholder="e.g. Anushka Sharma" required>
+                                    <span class="error-message" id="name-error">Please enter your name.</span>
+                                </div>
+
+                                <div class="input-group">
+                                    <label for="phoneNumber"><i class="ph-bold ph-phone"></i> Phone Number <span class="required">*</span></label>
+                                    <input type="tel" id="phoneNumber" placeholder="e.g. +91 98765 43210" required>
+                                    <span class="error-message" id="phone-error">Please enter a valid phone number.</span>
+                                </div>
+
+                                <div class="input-group">
+                                    <label for="email"><i class="ph-bold ph-envelope"></i> Email Address <span class="required">*</span></label>
+                                    <input type="email" id="email" placeholder="e.g. anushka@example.com" required>
+                                    <span class="error-message" id="email-error">Please enter a valid email address.</span>
+                                </div>
+                            </div>
+
+                            <!-- Right: Visual Curation Certificate (Receipt) -->
+                            <div class="summary-receipt">
+                                <div class="receipt-header">
+                                    <i class="ph-fill ph-seal-check"></i>
+                                    <span>STYLE DOSSIER</span>
+                                </div>
+                                <div class="receipt-body">
+                                    <div class="receipt-item">
+                                        <span class="label">Recipient</span>
+                                        <strong class="value" id="summary-rec">-</strong>
+                                    </div>
+                                    <div class="receipt-item">
+                                        <span class="label">Occasion</span>
+                                        <strong class="value" id="summary-occ">-</strong>
+                                    </div>
+                                    <div class="receipt-item">
+                                        <span class="label">Metal</span>
+                                        <strong class="value" id="summary-metal">-</strong>
+                                    </div>
+                                    <div class="receipt-item">
+                                        <span class="label">Stone Type</span>
+                                        <strong class="value" id="summary-stone">-</strong>
+                                    </div>
+                                    <div class="receipt-item">
+                                        <span class="label">Budget Tier</span>
+                                        <strong class="value highlight" id="summary-budget">-</strong>
+                                    </div>
+                                </div>
+                                <div class="receipt-seal">
+                                    <span>DIAVO JEWELS ORIGINAL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ==========================================
+                         SUCCESS CURATED RESULTS SCREEN
+                         ========================================== -->
+                    <div class="success-screen" id="success-screen" style="display: none;">
+                        <div class="success-header-wrapper">
+                            <div class="success-icon-badge">
+                                <i class="ph-bold ph-check"></i>
+                            </div>
+                            <h2>Your Curated Selection is Ready</h2>
+                            <p class="success-intro">Thank you, <strong id="success-client-name">-</strong>. Based on your style preferences, here are our recommended jewelry designs selected by our design team.</p>
+                        </div>
+
+                        <!-- Special Coupon Code Card -->
+                        <div class="coupon-card">
+                            <div class="coupon-tag">EXCLUSIVE GIFT VOUCHER</div>
+                            <div class="coupon-code-box">
+                                <strong id="coupon-code">DIAVO10</strong>
+                                <button type="button" class="copy-btn" id="copy-coupon-btn" aria-label="Copy code">
+                                    <i class="ph-bold ph-copy"></i> Copy Code
+                                </button>
+                            </div>
+                            <p class="coupon-terms">Get 10% off your curated selection on checkout. Valid for 48 hours.</p>
+                        </div>
+
+                        <!-- Curated Products Shelf -->
+                        <h3 class="shelf-title">Bespoke Matches For You</h3>
+                        <div class="products-grid" id="curated-products-grid">
+                            <!-- Dynamic recommendations injected here by js/app.js -->
+                        </div>
+
+                        <!-- Founders Signature Signoff -->
+                        <div class="founders-signoff">
+                            <div class="signoff-quote">
+                                <p>"We believe jewelry is not just an accessory, but a wearable work of art. Each piece in your curated collection represents our dedication to craftsmanship and fine detail."</p>
+                            </div>
+                            <div class="founders-info">
+                                <span class="founders-names">Rishabh & Anushka Agarwal</span>
+                                <span class="founders-title">Founders, Diavo Jewels Private Limited</span>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn-primary" id="reset-funnel-btn">Find Another Curation</button>
+                    </div>
+
+                    <!-- Action Navigation Row -->
+                    <div class="funnel-actions" id="funnel-actions-row">
+                        <button type="button" class="btn-secondary" id="back-btn" disabled>
+                            <i class="ph-bold ph-arrow-left"></i> Back
+                        </button>
+                        <button type="button" class="btn-primary" id="next-btn">
+                            Next Step <i class="ph-bold ph-arrow-right"></i>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__container">
+            <div class="footer__brand">
+                <i class="ph-bold ph-sketch-logo"></i> DIAVO JEWELERIES
+            </div>
+            <p>&copy; 2026 Diavo Jeweleries Private Limited. Moradabad | Delhi NCR. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- App Logic Script -->
+    <script src="js/app.js"></script>
+</body>
+</html>
